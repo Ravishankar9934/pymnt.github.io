@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Form</title>
+</head>
+<body>
+    <form action="">
+    <h1>Payment Form</h1>
+    <p>Required filled are followed by *</p>
+    <h2>Contact information</h2>
+    
+        <!-- Note: when we use input tag in form elemnt then name attributes of this is compulsory to be used.  -->
+        <!-- name must be unique except in case when we want options with one tick.  -->
+        <!-- shortcut input semicolon then choose input type -->
+        <p>Name:* <input type="text" name="name" required></p> 
+        <fieldset> <!--use to wrap the paragraph-->
+            <legend>Gender</legend> <!--give name to that wrap-->
+        <p>Male <input type="radio" name="Gender" id="male"> Female <input type="radio" name="Gender" id="female"></p> <!--suppose here name are not same then we are able to tick both the option-->
+        </fieldset>
+        <p>Address <textarea name="address" id="address" cols="100" rows="8"></textarea></p>
+        <p>Email <input type="email" name="email" id="email"></p>
+        <p>Pincode <input type="number" name="number" id="number"></p>
+
+        <h2>Payment Information</h2>
+        <p>Card type:
+            <select name="card_type" id="card type">
+                <option value="">--Select a card type--</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="masterard">MasterCard</option> 
+                <!-- value server ke pass jayegi aur bahar wla browser pe display hogi -->
+                <!-- yha value mein jo bhi hain o server ke pass jayega o small letter mein rhta hain aur jo bahar dikh rha hain o kevel user ke liye hain. --> 
+            </select>
+        </p>
+        <p>Card Number <input type="number" name="number" id="number"></p>
+        <p>Expiry Date:
+            <input type="date" name="expiry" id="expiry"></p>
+        <p>CVV <input type="password" name="cvv" id="cvv"></p>
+        <input type="submit" value="Pay Now">
+    </form>
+
+</body>
+</html>
+
+<!-- form element
+we use <form> tg which has two importnt attributes 1. methods 
+                                                   2. actions - server ka url daal dete h
+
+                                                   <input type="radio"id="male"name="gender"value="male">
+                                    # Elements in form tag :-
+                                    1.)input element with type attributes and name attributes and value attributes. 
+                                    for eg: <input type="text,password,radio,checkbox,file,submit,reset,image"> 
+
+                                    2.) textarea 
+                                    3.) select elemnt with option tag tag hain mtlb attribute nhi hain opening closing ke bich mein likhayega-->
